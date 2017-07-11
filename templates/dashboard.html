@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard</title>
+</head>
+<body>
+	{% with messages = get_flashed_messages() %}
+	   {% if messages %}
+	      {% for message in messages %}
+	         {{ message }}
+	      {% endfor %}
+	   {% endif %}
+	{% endwith %}
+	<h2>this is the dashboard</h2>
+</body>
+</html>

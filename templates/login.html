@@ -1,0 +1,30 @@
+{% extends "extender.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Page</title>
+</head>
+
+<body>
+	{% with messages = get_flashed_messages() %}
+	   {% if messages %}
+	      {% for message in messages %}
+	         {{ message }}
+	      {% endfor %}
+	   {% endif %}
+	{% endwith %}
+	<form action="/login/" method="POST">
+		Username: <input type="text" name="username" value="{{ request.form['username'] }}"><br>
+		Password: <input type="password" name="password" value="{{ request.form['password'] }}"><br>
+		<input type="submit" value="Login">
+	</form>
+	{{ error }}
+</body>
+
+</html>
+
+{% endblock %}
