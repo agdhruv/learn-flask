@@ -1,1 +1,2 @@
-learn/ # this is the virtual environment folder. Use requirements.txt file to install all python dependencies in the virtual environment.
+# this is the virtual environment folder. Use requirements.txt file to install all python dependencies in the virtual environment.
+learn/
